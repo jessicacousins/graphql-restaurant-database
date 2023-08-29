@@ -91,8 +91,17 @@ var root = {
   restaurant: (arg) => restaurants[arg.id],
   restaurants: () => restaurants,
   setrestaurant: ({ input }) => {
-    restaurants.push({ name: input.name, email: input.email, age: input.age });
-    return input;
+    // restaurants.push({ name: input.name, email: input.email, age: input.age });
+    // return input;
+    const newId = restaurants.length + 1;
+    const newRestaurant = {
+      id: newId,
+      name: input.name,
+      email: input.email,
+      age: input.age,
+    };
+    restaurants.push(newRestaurant);
+    return newRestaurant;
   },
 
   deleterestaurant: ({ id }) => {

@@ -29,10 +29,11 @@ mutation editrestaurants($iid: Int = 1, $name: String!, $description: String!) {
 
 mutation setrestaurants {
   setrestaurant(input: {
-    name: "Newest New Food Store USA"
+    name: "#1 New Food Store USA"
     description: "American"
   })
   {
+    id
     name
     description
   }
